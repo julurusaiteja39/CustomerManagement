@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeLeaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>New Category</title>
+    <style>
+button {
+
+
+
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+background-color: #4CAF50;
+}
+
+
+
+h1 {
+text-align: center;
+color: blue;
+}
+
+
+
+form {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Create New Expense</h1>
+<form th:action ="@{/expense_dtls}" th:object ="${expense}" method="post">
+    <label>Expense Id : <input type="number" id="expId" name="expId" placeholder="Enter Expense Id" required></label><br /><br />
+    <label>Expense Date : <input type="date" id="expDate" name="expDate" placeholder="Expense Date" required></label><br /><br />
+    <label>Description : <input type="text" id="description" name="description" placeholder="Expense Description" required></label><br /><br />
+    <label>Location : <input type="text" id="location" name="location" placeholder="Location" required></label><br /><br />
+    <label>Category Id : <input type="number" id="category" name="category" placeholder="Category Id" required></label><br /><br />
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeLeaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>New Category</title>
+    <style>
+button {
+
+
+
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+background-color: #4CAF50;
+}
+
+
+
+h1 {
+text-align: center;
+color: blue;
+}
+
+
+
+form {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Create New Category</h1>
+<form th:action ="@{/cat_dtls}" th:object ="${category}" method="post">
+    <label>Category Id : <input type="number" id="CatId" name="CatId" placeholder="Enter Category Id" required></label><br /><br />
+    <label>Category Name : <input type="text" id="catName" name="catName" placeholder="Category name" required></label><br /><br />
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
+
